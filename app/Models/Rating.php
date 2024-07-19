@@ -7,7 +7,7 @@ use App\Models\Reviewer;
 
 class Rating extends Model
 {
-    protected $primaryKey = 'rat_id';
+    
     public $incrementing = false;
     public $timestamps = false;
 

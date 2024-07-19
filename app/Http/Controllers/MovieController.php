@@ -16,4 +16,14 @@ class MovieController extends Controller
     {
         return response()->json(Movie::with(['directors', 'actors', 'genres', 'ratings.reviewer'])->findOrFail($id));
     }
+
+    public function movieGenres()
+    {
+        return response()->json(Movie::with(['genres'])->get());
+    }
+    
+    public function movieRatingsRater()
+    {
+        return response()->json(Movie::with(['ratings.reviewer'])->get());
+    }
 }
